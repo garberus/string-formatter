@@ -1,0 +1,18 @@
+{
+  "name": "replacer",
+  "version": "0.0.0",
+  "description": "A string replacer.",
+  "main": "replacer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "string"
+  ],
+  "devDependencies": {
+    "mocha": "~1.15",
+    "expectacle": "~1.1"
+  },
+  "author": "Johan Garderud <j@garderud.net>",
+  "license": "BSD-2-Clause"
+}
