@@ -2,6 +2,25 @@
 
 'use strict';
 
+/**
+ * Function that will take a string with placeholders and replace those
+ * placeholders with strings provided as an array. The index of the placeholders
+ * correspond to the order of the string array.
+ * @param {string} str The string with placeholders.
+ * @param {string|Array} args The strings to replace with (or an array thereof).
+ * @returns {string}
+ *
+ * @example
+ *    replace("Everything's {0}, Cap'n. Not to fret.", 'shiny')
+ *        // "Everything's shiny Cap'n. Not to fret."
+ *
+ *    replace("The hero of {1}, the man they call {0}.", ['Jayne', 'Canton'])
+ *        // "The hero of Canton, the man they call Jayne."
+ *
+ *    replace("Take my {0}, take my {1}. Take me where I cannot {2}.",
+ *        ['love', 'land', 'stand'])
+ *        // "Take my love, take my land. Take me where I cannot stand."
+ */
 var replace = function replace(str, args) {
 
   var i,l;
