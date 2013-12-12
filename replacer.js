@@ -28,6 +28,8 @@ var replace = function replace(str, args) {
   }
   else if (!Array.isArray(args)) {
     throw new Error('Argument was not in the correct format.');
+  } else {
+    replacers = args;
   }
 
   // Find occurrences of { and }.
@@ -36,7 +38,7 @@ var replace = function replace(str, args) {
   }
 
   // Find the number of placeholders.
-  for (i=0, l=str.split('{').length; i<l; i++) {
+  for (i=0, l=(str.split('{').length-1); i<l; i++) {
     placeholders.push('{'+ i +'}');
   }
 
@@ -48,6 +50,9 @@ var replace = function replace(str, args) {
 
   // Start doing replace operations.
   for (i=0, l=placeholders.length; i<l; i++) {
+    if (!(typeof replacers[i] === 'string') || (typeof replacers[i] === 'number')) {
+      throw new Error('The arguments to this function must be strings or numbers.');
+    }
     str = str.replace(placeholders[i], replacers[i]);
   }
 
