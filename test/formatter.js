@@ -3,7 +3,7 @@
 'use strict';
 
 var expect = require('expectacle');
-var formatter = require('../formatter.js');
+var formatter = require('../src/formatter.js');
 
 describe('Formatter', function() {
 
@@ -12,11 +12,6 @@ describe('Formatter', function() {
     it('should fail if the first argument is not a string', function() {
       expect(formatter.format.bind(formatter, 42, 'Jayne'))
           .toThrow('The first argument must a be string.');
-    });
-
-    it('should protest if the arguments index order isn\'t respected', function() {
-      expect(formatter.format.bind(formatter, 'The hero of Canton, the man they call {1}.', 'Jayne'))
-          .toThrow('Invalid argument index detected.');
     });
 
     it('should protest if the arguments index count is bigger than the supplied arguments array', function() {
@@ -51,7 +46,7 @@ describe('Formatter', function() {
     });
 
     it('should replace the placeholder in a string by supplying a string argument', function() {
-      expect(formatter.replace('The hero of Canton, the man they call {0}.', 'Jayne'))
+      expect(formatter.format('The hero of Canton, the man they call {0}.', 'Jayne'))
           .toBe('The hero of Canton, the man they call Jayne.');
     });
 

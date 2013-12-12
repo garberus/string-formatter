@@ -56,7 +56,7 @@ var format = function format(str, args) {
   }
 
   // Find the number of placeholders.
-  for (i=0, l=(str.split('{').length-1); i<l; i++) {
+  for (i = 0, l = (str.split('{').length - 1); i < l; i++) {
     placeholders.push('{'+ i +'}');
   }
 
@@ -67,7 +67,7 @@ var format = function format(str, args) {
   }
 
   // Start doing replace operations.
-  for (i=0, l=placeholders.length; i<l; i++) {
+  for (i = 0, l = placeholders.length; i < l; i++) {
     if (!(typeof replacers[i] === 'string') || (typeof replacers[i] === 'number')) {
       throw new Error('The arguments to this function must be strings or numbers.');
     }
@@ -76,7 +76,6 @@ var format = function format(str, args) {
 
   // Return replaced string.
   return str;
-
 };
 
 if (exports) {

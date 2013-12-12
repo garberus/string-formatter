@@ -1,13 +1,16 @@
 {
-  "name": "replacer",
+  "name": "string-formatter",
   "version": "0.1.0",
   "description": "A string formatter.",
-  "main": "formatter.js",
+  "repository": "https://github.com/garberus/string-formatter.git",
+  "main": "src/formatter.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "string"
+    "string",
+    "format",
+    "replace"
   ],
   "devDependencies": {
     "mocha": "~1.15",
