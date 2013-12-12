@@ -9,18 +9,18 @@
  * @returns {string}
  *
  * @example
- *    replace("Everything's {0}, Cap'n. Not to fret.", 'shiny')
+ *    format("Everything's {0}, Cap'n. Not to fret.", 'shiny')
  *        // "Everything's shiny Cap'n. Not to fret."
  *
- *    replace("The hero of {1}, the man they call {0}.", ['Jayne', 'Canton'])
+ *    format("The hero of {1}, the man they call {0}.", ['Jayne', 'Canton'])
  *        // "The hero of Canton, the man they call Jayne."
  *
- *    replace("Take my {0}, take my {1}. Take me where I cannot {2}.",
+ *    format("Take my {0}, take my {1}. Take me where I cannot {2}.",
  *        ['love', 'land', 'stand'])
  *        // "Take my love, take my land. Take me where I cannot stand."
  */
 
-var replace = function replace(str, args) {
+var format = function format(str, args) {
 
   var i,l;
 
@@ -80,5 +80,5 @@ var replace = function replace(str, args) {
 };
 
 if (exports) {
-  exports.replace = replace;
+  exports.format = format;
 }

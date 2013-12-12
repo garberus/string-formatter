@@ -1,8 +1,8 @@
 {
   "name": "replacer",
-  "version": "0.0.0",
-  "description": "A string replacer.",
-  "main": "replacer.js",
+  "version": "0.1.0",
+  "description": "A string formatter.",
+  "main": "formatter.js",
   "scripts": {
     "test": "mocha"
   },
