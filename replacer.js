@@ -1,5 +1,3 @@
-/*jslint node: true*/
-
 'use strict';
 
 /**
@@ -21,6 +19,7 @@
  *        ['love', 'land', 'stand'])
  *        // "Take my love, take my land. Take me where I cannot stand."
  */
+
 var replace = function replace(str, args) {
 
   var i,l;
