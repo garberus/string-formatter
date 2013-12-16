@@ -68,7 +68,7 @@ var format = function format(str, args) {
 
   // Start doing replace operations.
   for (i = 0, l = placeholders.length; i < l; i++) {
-    if (!(typeof replacers[i] === 'string') || (typeof replacers[i] === 'number')) {
+    if (!(typeof replacers[i] === 'string' || typeof replacers[i] === 'number')) {
       throw new Error('The arguments to this function must be strings or numbers.');
     }
     str = str.replace(placeholders[i], replacers[i]);
