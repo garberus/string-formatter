@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Function that will take a string with placeholders and replace those
+ * Utility function that will take a string with placeholders and replace those
  * placeholders with strings provided as an array. The index of the placeholders
  * correspond to the order of the string array.
  * @param {string} str The string with placeholders.
