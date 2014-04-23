@@ -1,5 +1,7 @@
 # string-formatter
 
+<a href="https://travis-ci.org/garberus/string-formatter" target="_blank"><img src="https://travis-ci.org/garberus/string-formatter.svg" data-bindattr-145="145" title="Build Status Images"></a>
+
 Utility function that will take a string with placeholders and replace those
 placeholders with strings provided as an array. The index of the placeholders
 correspond to the order of the string array.
