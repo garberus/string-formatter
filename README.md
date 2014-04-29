@@ -10,7 +10,7 @@ correspond to the order of the string array.
 
 `format("Everything's {0}, Cap'n. Not to fret.", 'shiny');`
 
-// "Everything's shiny Cap'n. Not to fret."
+// "Everything's shiny, Cap'n. Not to fret."
 
 `format("The hero of {1}, the man they call {0}.", ['Jayne', 'Canton']);`
 
